@@ -1,4 +1,4 @@
-# Welcome to a repository of my Inventions
+# Welcome to a repository of my inventions
 Haha. In all seriousness, this is a place for interview practice, and to prove to you that I know how to test my own code.
 
 ## What's here

@@ -25,7 +25,11 @@ public class LinkedList<T> {
             return true;
         } else if (head.equals(tail)) {
             head.setNext(n);
-            tail = n;
+            if (tail.getNext() == null) {
+                tail = n;
+            } else {
+                tail = n.getLast();
+            }
             size++;
             return true;
         } else {

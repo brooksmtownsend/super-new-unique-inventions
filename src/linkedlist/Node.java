@@ -7,15 +7,6 @@ public class Node<T> {
    public Node(T data) {
         this.data = data;
    }
-   // The recursive solution to insert will fail after lists of large sizes. Better to do it iteratively.
-//   public boolean insert(Node n) {
-//       if (next == null) {
-//           next = n;
-//           return true;
-//       } else {
-//           return next.insert(n);
-//       }
-//   }
 
    public boolean insert(Node n) {
        Node next = this;
@@ -37,6 +28,13 @@ public class Node<T> {
    }
    public void setNext(Node next) {
        this.next = next;
+   }
+   public Node getLast() {
+       if (next == null) {
+           return this;
+       } else {
+           return next.getLast();
+       }
    }
    public String toString() {
        if (this.next == null) {
